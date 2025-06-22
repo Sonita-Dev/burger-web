@@ -47,7 +47,13 @@ nav {
   display: flex;
   align-items: center;
 }
-
+.logo a {
+  text-decoration: none;
+  color: #b0fc38;
+}
+.logo a:hover {
+  color: #9dcf46;
+}
 .logo-icon-text {
   font-size: 1.2em; /* Adjust emoji size */
   margin-right: 8px;
@@ -69,7 +75,9 @@ nav ul li a {
   font-size: 0.95em;
   transition: color 0.3s ease;
 }
-
+nav ul li a.active {
+  color: #b0fc38;
+}
 nav ul li a:hover {
   color: #b0fc38; /* Use the green accent color on hover */
 }
@@ -102,14 +110,21 @@ main {
 .hero-image-container {
   margin-top: -180px; /* Creates the overlap effect */
   margin-bottom: -100px; /* Pulls the next section up */
+  transition: transform 0.3s ease;
 }
-
 .hero-image-container img {
   max-width: 550px; /* Max size of the sandwich image */
   width: 70%; /* Responsive width */
   height: auto;
   display: block;
   margin: 0 auto; /* Center the image */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hero-image-container:hover {
+  transform: scale(1.03);
+}
+.hero-image-container:hover img {
+  transform: scale(1.08);
 }
 
 /* Info Call-to-Action Section */
@@ -189,6 +204,14 @@ main {
   font-size: 1.1em;
   margin-bottom: 30px;
 }
+.menu-item img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.menu-item img:hover {
+  transform: scale(0.9);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
 /* =================================
    4. Footer
 ==================================== */
